@@ -15,5 +15,28 @@ namespace Ucu.Poo.Restaurant
     public class Menu
     {
         private ArrayList dishes = new ArrayList();
+
+        public void AddDish(Dish platillo)
+        {
+            dishes.Add(platillo);
+        }
+
+        public void RemoveDish(Dish platillo)
+        {
+            dishes.Remove(platillo);
+        }
+
+        public Dish GetDishByName(string name)
+        {
+            foreach (Dish platillo in dishes)
+            {
+                if (platillo.Name == name)
+                {
+                    return platillo;
+                }
+            }
+
+            return null;
+        }
     }
 }
