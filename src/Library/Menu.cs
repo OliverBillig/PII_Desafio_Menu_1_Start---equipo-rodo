@@ -4,6 +4,7 @@
 // </copyright>
 //------------------------------------------------------------------------------
 
+using System;
 using System.Collections;
 
 namespace Ucu.Poo.Restaurant
@@ -14,16 +15,16 @@ namespace Ucu.Poo.Restaurant
     /// </summary>
     public class Menu
     {
-        private ArrayList dishes = new ArrayList();
+        public ArrayList dishes = new ArrayList();
 
-        public void AddDish(Dish platillo)
+        public void AddDish(Dish dish)
         {
-            dishes.Add(platillo);
+            dishes.Add(dish);
         }
 
-        public void RemoveDish(Dish platillo)
+        public void RemoveDish(Dish dish)
         {
-            dishes.Remove(platillo);
+            dishes.Remove(dish);
         }
 
         public Dish GetDishByName(string name)
@@ -38,5 +39,14 @@ namespace Ucu.Poo.Restaurant
 
             return null;
         }
+
+        public Dish ListaDishes(Dish dish)
+        {
+            for (int i=0; i++; i<=dishes.Count)
+            {
+                Console.WriteLine(dishes[i]);
+            }
+        }
+
     }
 }
