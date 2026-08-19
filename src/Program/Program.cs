@@ -18,8 +18,8 @@ namespace Ucu.Poo.Restaurant
         /// </summary>
         public static void Main()
         {
-            // Dish burger = new Dish("Burger", 5.99, false);
-            // Dish salad = new Dish("Salad", 4.99, true);
+            Dish burger = new Dish("Burger", 5.99, false);
+            Dish salad = new Dish("Salad", 4.99, true);
             // Menu menu = new Menu();
             // menu.AddDish(burger);
             // menu.AddDish(salad);
