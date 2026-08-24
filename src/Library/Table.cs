@@ -60,6 +60,15 @@ namespace Ucu.Poo.Restaurant
             return this.order.Count > 0;
         }
 
+        public double GetTotal()
+        {
+            double total = 0;
+            foreach (Dish dish in order)
+            {
+                total = total + dish.Price;
+            }
+            return total;
+        }
 
     }
 }

@@ -50,15 +50,5 @@ namespace Ucu.Poo.Restaurant
             }
         }
 
-        public double GetTotal()
-        {
-            double total = 0;
-            foreach (Dish dish in dishes)
-            {
-                total = total + dish.Price;
-            }
-            return total;
-        }
-
     }
 }
