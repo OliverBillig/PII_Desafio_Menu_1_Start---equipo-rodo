@@ -41,7 +41,7 @@ namespace Ucu.Poo.Restaurant
             return null;
         }
 
-        public void ListaDishes(List<Dish> dishes)
+        public void ListaDishes()
         {
             foreach (Dish dish in dishes)
             {
