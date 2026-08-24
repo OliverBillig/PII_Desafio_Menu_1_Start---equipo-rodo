@@ -6,6 +6,7 @@
 
 using System;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace Ucu.Poo.Restaurant
 {
@@ -29,22 +30,22 @@ namespace Ucu.Poo.Restaurant
 
         public Dish GetDishByName(string name)
         {
-            foreach (Dish platillo in dishes)
+            foreach (Dish dish in dishes)
             {
-                if (platillo.Name == name)
+                if (dish.Name == name)
                 {
-                    return platillo;
+                    return dish;
                 }
             }
 
             return null;
         }
 
-        public Dish ListaDishes(Dish dish)
+        public void ListaDishes(List<Dish> dishes)
         {
-            for (int i=0; i++; i<=dishes.Count)
+            foreach (Dish dish in dishes)
             {
-                Console.WriteLine(dishes[i]);
+                Console.WriteLine($"{dish.Name} - ${dish.Price}");
             }
         }
 

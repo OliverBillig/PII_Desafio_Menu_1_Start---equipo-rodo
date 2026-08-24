@@ -34,7 +34,7 @@ namespace Ucu.Poo.Restaurant
             oneTable.Free();
             Console.WriteLine(
                  $"La mesa {oneTable.Number} está ocupada: {oneTable.IsOccupied}");
-            Console.WriteLine(
+            Console.WriteLine($"EL menu completo es: {ListaDishes}"
             );
         }
     }
