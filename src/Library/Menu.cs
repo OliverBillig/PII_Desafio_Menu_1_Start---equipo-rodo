@@ -7,6 +7,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 
 namespace Ucu.Poo.Restaurant
 {
@@ -47,6 +48,16 @@ namespace Ucu.Poo.Restaurant
             {
                 Console.WriteLine($"{dish.Name} - ${dish.Price}");
             }
+        }
+
+        public double GetTotal()
+        {
+            double total = 0;
+            foreach (Dish dish in dishes)
+            {
+                total = total + dish.Price;
+            }
+            return total;
         }
 
     }

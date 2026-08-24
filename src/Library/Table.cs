@@ -19,10 +19,13 @@ namespace Ucu.Poo.Restaurant
 
         public bool IsOccupied { get; private set; }
 
+        public bool IsTakeOut { get; private set; }
+
         public Table(int number)
         {
             this.Number = number;
             this.IsOccupied = false;
+            this.IsTakeOut = false;
         }
 
         public void Occupy()
@@ -36,6 +39,17 @@ namespace Ucu.Poo.Restaurant
             this.order.Clear();
         }
 
+        public void TakeOut()
+        {
+            this.IsTakeOut = true;
+        }
+
+        public void Taked()
+        {
+            this.IsTakeOut = false;
+            this.order.Clear();
+        }
+
         public void AddToOrder(Dish dish)
         {
             this.order.Add(dish);
@@ -46,6 +60,6 @@ namespace Ucu.Poo.Restaurant
             return this.order.Count > 0;
         }
 
-        
+
     }
 }
